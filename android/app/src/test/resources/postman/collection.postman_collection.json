@@ -1,0 +1,4204 @@
+{
+	"info": {
+		"_postman_id": "a8fec1eb-35cd-4f09-8fae-d5a246a2b384",
+		"name": "collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "186564"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Получить код",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"incididunt dolore officia\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Подтвердить код",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"dolor aliqua irure\",\n  \"code\": \"in nisi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"phone\": \"dolor aliqua irure\",\n  \"code\": \"in nisi\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"session_id\": \"urn:uuid:12fe3f5a-007d-f14e-3447-e3566547172d\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Выйти из аккаунта",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Войти через тинькофф",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"access_token\": \"pariatur eni\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/tinkoff",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"tinkoff"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"access_token\": \"pariatur eni\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/tinkoff",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"tinkoff"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"session_id\": \"urn:uuid:12fe3f5a-007d-f14e-3447-e3566547172d\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "barrels",
+					"item": [
+						{
+							"name": "Получить список бочек",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/barrels?is_visible=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrels"
+									],
+									"query": [
+										{
+											"key": "is_visible",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/barrels?is_visible=false",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"barrels"
+											],
+											"query": [
+												{
+													"key": "is_visible",
+													"value": "false"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"barrels\": [\n    {\n      \"id\": \"urn:uuid:2cdc92f1-7dbb-a073-d5ac-8d0577e59508\",\n      \"lat\": -29180832,\n      \"lon\": 51081099,\n      \"pin\": \"Duis minim sit\"\n    },\n    {\n      \"id\": \"urn:uuid:3dfd99e6-3a69-a5f9-5663-ae899faa6667\",\n      \"lat\": 14459376,\n      \"lon\": 8135201,\n      \"pin\": \"ea ut laborum\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить бочку",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/barrels/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrels",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/barrels/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"barrels",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"barrel\": {\n    \"id\": \"urn:uuid:00833ea9-5e42-8c22-8372-ade4cb1b37cf\",\n    \"volume\": -42788267,\n    \"lat\": -17407240,\n    \"lon\": -30790468,\n    \"address\": \"ut Excepteur reprehenderit\",\n    \"fuel_price\": -96315450,\n    \"photo\": \"dolore\",\n    \"description\": \"tempor laborum sint\",\n    \"fuel_type\": \"non fugiat\",\n    \"fuel_color\": \"ex aliquip\",\n    \"min_user_distance\": -83354021,\n    \"has_active_order\": false,\n    \"packages\": [\n      {\n        \"header_title\": \"in non Duis\",\n        \"header_price\": \"qui mollit quis exercitation Lorem\",\n        \"title\": \"proident cillum Duis\",\n        \"description\": \"deserunt et velit ad\",\n        \"marker\": \"anim in nisi exercitation labore\",\n        \"max_fuel_volume\": -61466646,\n        \"cashback_text\": \"irure sint cillum nisi labore\",\n        \"is_available\": true\n      },\n      {\n        \"header_title\": \"Duis est nisi\",\n        \"header_price\": \"aliqua dolor et\",\n        \"title\": \"mollit et\",\n        \"description\": \"eiusmod quis dolor ut\",\n        \"marker\": \"officia do sit ut\",\n        \"max_fuel_volume\": -3099118,\n        \"cashback_text\": \"do eu laboris ut\",\n        \"is_available\": true\n      }\n    ],\n    \"steps\": [\n      {\n        \"header_title\": \"anim sed\",\n        \"header_price\": \"ad incididunt dolore\",\n        \"label\": \"sint esse ipsum\",\n        \"max_fuel_volume\": 26707147,\n        \"cashback_text\": \"esse sed nostrud est\",\n        \"is_available\": false\n      },\n      {\n        \"header_title\": \"nisi laboris magna\",\n        \"header_price\": \"veniam nostrud eu\",\n        \"label\": \"enim ut mollit\",\n        \"max_fuel_volume\": 90651682,\n        \"cashback_text\": \"sunt \",\n        \"is_available\": false\n      }\n    ]\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "barrel-orders",
+					"item": [
+						{
+							"name": "Создать заказ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"barrel_id\": \"42d7e6e3-d8ba-de97-9000-f097c1a4ea44\",\n  \"max_fuel_volume\": 95337566,\n  \"user_lat\": 59994035,\n  \"user_lon\": 56960390,\n  \"comment\": \"nostrud nisi\",\n  \"target_company_id\": \"ad690472-db22-f886-900d-7d2a41118031\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/barrel-orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrel-orders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"barrel_id\": \"42d7e6e3-d8ba-de97-9000-f097c1a4ea44\",\n  \"max_fuel_volume\": 95337566,\n  \"user_lat\": 59994035,\n  \"user_lon\": 56960390,\n  \"comment\": \"nostrud nisi\",\n  \"target_company_id\": \"ad690472-db22-f886-900d-7d2a41118031\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/barrel-orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"barrel-orders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"barrel_order\": {\n    \"id\": \"urn:uuid:a417fa50-5154-c396-850f-ef422b9c37c7\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список заказов",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/barrel-orders?page=70659316&count=70659316&is_active=true&group_by_created_at=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrel-orders"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "70659316"
+										},
+										{
+											"key": "count",
+											"value": "70659316"
+										},
+										{
+											"key": "is_active",
+											"value": "true"
+										},
+										{
+											"key": "group_by_created_at",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/barrel-orders?page=70659316&count=70659316&is_active=true&group_by_created_at=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"barrel-orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "70659316"
+												},
+												{
+													"key": "count",
+													"value": "70659316"
+												},
+												{
+													"key": "is_active",
+													"value": "true"
+												},
+												{
+													"key": "group_by_created_at",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"barrel_orders\": [\n    {\n      \"id\": \"urn:uuid:ea0d4a8e-57ad-a623-f154-fda17bae9394\",\n      \"address\": \"min\",\n      \"total\": 93783704,\n      \"created_at\": \"1949-12-12T10:33:22.750Z\",\n      \"fuel_volume\": 524744,\n      \"fuel_type\": \"ea deserunt\",\n      \"fuel_color\": \"dolore labore commodo\",\n      \"barrel_photo\": \"in enim deserunt consequat\",\n      \"finished_at\": \"1988-02-23T03:31:06.078Z\",\n      \"max_fuel_volume\": -16782778,\n      \"comment\": \"dese\",\n      \"summary\": [\n        {\n          \"key\": \"magna nostrud incididunt\",\n          \"description\": \"commodo velit\",\n          \"description_color\": \"Duis s\",\n          \"value\": \"ali\",\n          \"value_color\": \"ipsum reprehenderit ut magna consequat\",\n          \"is_bold\": true\n        },\n        {\n          \"key\": \"ad minim exercitation dolor\",\n          \"description\": \"consequat irure adipisicing\",\n          \"description_color\": \"nisi do nostrud\",\n          \"value\": \"ex ad qui pariatur\",\n          \"value_color\": \"veniam ea\",\n          \"is_bold\": true\n        }\n      ],\n      \"target_company\": {\n        \"name\": \"sed esse nisi cillum aliqua\"\n      },\n      \"badge\": {\n        \"text\": \"dolore commodo cupidatat\",\n        \"text_color\": \"Excepteur mollit deserunt nulla\",\n        \"background_color\": \"amet eu irure mollit\"\n      }\n    },\n    {\n      \"id\": \"urn:uuid:5c901ff3-4c93-70ee-5884-b209f65f47b6\",\n      \"address\": \"enim labore ipsum\",\n      \"total\": 27876250,\n      \"created_at\": \"2003-04-16T07:06:16.785Z\",\n      \"fuel_volume\": 34208977,\n      \"fuel_type\": \"mollit\",\n      \"fuel_color\": \"sed pariatur\",\n      \"barrel_photo\": \"quis aute aliquip in\",\n      \"finished_at\": \"1947-08-24T12:47:57.293Z\",\n      \"max_fuel_volume\": -27803534,\n      \"comment\": \"eiusmod\",\n      \"summary\": [\n        {\n          \"key\": \"minim in laboris\",\n          \"description\": \"occaecat est\",\n          \"description_color\": \"occaeca\",\n          \"value\": \"sint aliqua commodo laboris qui\",\n          \"value_color\": \"labore dolore\",\n          \"is_bold\": true\n        },\n        {\n          \"key\": \"velit ad\",\n          \"description\": \"fugiat consequat ad\",\n          \"description_color\": \"enim\",\n          \"value\": \"sint dolore adipisicing id\",\n          \"value_color\": \"dolore ad laborum\",\n          \"is_bold\": false\n        }\n      ],\n      \"target_company\": {\n        \"name\": \"consectetur minim\"\n      },\n      \"badge\": {\n        \"text\": \"nulla ad eiusmod laborum\",\n        \"text_color\": \"nisi sit Excepteur dolor\",\n        \"background_color\": \"consequat ess\"\n      }\n    }\n  ],\n  \"count\": -95061061\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить заказ",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/barrel-orders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrel-orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/barrel-orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"barrel-orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"barrel_order\": {\n    \"id\": \"f568c865-6864-8a1b-a9e0-229f82084027\",\n    \"total\": 32697049,\n    \"fuel_volume\": -66197060,\n    \"finished_at\": \"1980-03-10T15:34:56.369Z\",\n    \"start_command\": {\n      \"status\": \"nostrud\"\n    },\n    \"finish_command\": {\n      \"status\": \"quis dolor minim non ea\"\n    },\n    \"should_show_alert\": false,\n    \"should_wait_for_barrel_response\": false\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cars",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Удалить автомобиль",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/cars/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cars",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Загрузить фото автомобиля",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cars/:id/photo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cars",
+												":id",
+												"photo"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": []
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/cars/:id/photo",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"cars",
+														":id",
+														"photo"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"image\": \"mollit cupidatat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Получить цены на топливо, доставку для автомобиля",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/cars/:id/fuelprice",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cars",
+												":id",
+												"fuelprice"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/cars/:id/fuelprice",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"cars",
+														":id",
+														"fuelprice"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"fuel_price\": -34238901,\n  \"delivery_price\": 74897896,\n  \"full_tank_prepayment\": 75755950,\n  \"packages\": [\n    {\n      \"header_title\": \"dolor cupidatat consectetur\",\n      \"header_price\": \"velit pariatu\",\n      \"title\": \"anim ut elit et aliqua\",\n      \"description\": \"dolor quis ad sed\",\n      \"marker\": \"veniam esse\",\n      \"max_fuel_volume\": 36360587,\n      \"cashback_text\": \"ad cupidatat in\"\n    },\n    {\n      \"header_title\": \"\",\n      \"header_price\": \"magna sed Duis\",\n      \"title\": \"dolore\",\n      \"description\": \"occaecat ullamco\",\n      \"marker\": \"minim nulla\",\n      \"max_fuel_volume\": -72294299,\n      \"cashback_text\": \"sed ea\"\n    }\n  ],\n  \"steps\": [\n    {\n      \"header_title\": \"irure quis\",\n      \"header_price\": \"voluptate ea aute consequat\",\n      \"label\": \"ex\",\n      \"max_fuel_volume\": 90753498,\n      \"cashback_text\": \"et velit\"\n    },\n    {\n      \"header_title\": \"labore dolore in magna ad\",\n      \"header_price\": \"nostrud veniam in eiusmod anim\",\n      \"label\": \"tempor nostrud veniam est\",\n      \"max_fuel_volume\": -4691094,\n      \"cashback_text\": \"sit voluptate\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Получить список автомобилей",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/cars?without_subscription=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"cars"
+									],
+									"query": [
+										{
+											"key": "without_subscription",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/cars?without_subscription=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cars"
+											],
+											"query": [
+												{
+													"key": "without_subscription",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cars\": [\n    {\n      \"car_id\": \"urn:uuid:77091070-4ef6-d1e6-166d-9209954715bb\",\n      \"color\": \"nulla in eu\",\n      \"number\": \"ex \",\n      \"image\": \"non veniam eiusmod ex\",\n      \"model\": \"velit\",\n      \"fuel_type\": \"velit nisi ea\",\n      \"fuel_color\": \"Duis consectetur esse\"\n    },\n    {\n      \"car_id\": \"urn:uuid:01ecda13-903a-9b8d-82b3-5dc5bbf470b9\",\n      \"color\": \"occaecat\",\n      \"number\": \"in consequat tempor adipisicing\",\n      \"image\": \"commodo occaecat est\",\n      \"model\": \"laboris dolor pariatur\",\n      \"fuel_type\": \"eiusmo\",\n      \"fuel_color\": \"veniam consectetur in Duis laborum\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Создать автомобиль",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model",
+											"value": "mollit officia in",
+											"description": "undefined",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "sit ad reprehenderit culpa",
+											"description": "undefined",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "enim culpa",
+											"description": "undefined",
+											"type": "text"
+										},
+										{
+											"key": "fuel_type_id",
+											"value": "urn:uuid:12d7575a-097a-4e63-68f5-9ddf46c3a61e",
+											"description": "undefined",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "deserunt ex",
+											"description": "undefined",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/cars",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"cars"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "model",
+													"value": "mollit officia in",
+													"description": "undefined",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "sit ad reprehenderit culpa",
+													"description": "undefined",
+													"type": "text"
+												},
+												{
+													"key": "number",
+													"value": "enim culpa",
+													"description": "undefined",
+													"type": "text"
+												},
+												{
+													"key": "fuel_type_id",
+													"value": "urn:uuid:12d7575a-097a-4e63-68f5-9ddf46c3a61e",
+													"description": "undefined",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "deserunt ex",
+													"description": "undefined",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cars",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cars"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"car_id\": \"7c62e18a-8d1d-6ec8-e4cd-5867272fc979\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cards",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Получить банковскую карту",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/cards/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cards",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/cards/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"cards",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"card\": {\n    \"card_id\": \"b6461b5a-c7cf-a761-b719-9e8cd6d04eef\",\n    \"type\": \"fugiat exercitation\",\n    \"number\": \"labore\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Удалить банковскую карту",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/cards/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cards",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Получить список банковских карт",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/cards",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"cards"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/cards",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cards"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cards\": [\n    {\n      \"card_id\": \"00ba2b54-a476-3710-987f-a4e56632e533\",\n      \"type\": \"sed veniam elit\",\n      \"number\": \"magna\"\n    },\n    {\n      \"card_id\": \"urn:uuid:8eb9ccbe-4cb7-ac38-6554-7921c016ec67\",\n      \"type\": \"elit esse\",\n      \"number\": \"Ut\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Привязать банковскую карту",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"card_holder\": \"magna amet labore\",\n  \"crypto_packet\": \"occaecat enim id veniam\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/cards",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"cards"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"card_holder\": \"magna amet labore\",\n  \"crypto_packet\": \"occaecat enim id veniam\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cards",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cards"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"card_id\": \"d4227aa7-263e-550e-0c90-2feb759407f1\",\n  \"req_url\": \"velit occaecat ea\",\n  \"finish_url\": \"occaecat cillum incididunt aliquip sed\",\n  \"secure_check_needed\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "Получить список сервисов",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/services",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"services"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"services\": [\n    {\n      \"id\": \"irure sit\",\n      \"title\": \"et proident dolor\",\n      \"with_dot\": true\n    },\n    {\n      \"id\": \"aliqua\",\n      \"title\": \"\",\n      \"with_dot\": true\n    }\n  ],\n  \"history_tabs\": [\n    {\n      \"id\": \"incididunt aliqua consectetur\",\n      \"can_be_created\": true\n    },\n    {\n      \"id\": \"nisi incididunt enim\",\n      \"can_be_created\": false\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить детали Pump",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/services/pump?lat=-28214814.560443684&lon=-28214814.560443684&car_id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services",
+										"pump"
+									],
+									"query": [
+										{
+											"key": "lat",
+											"value": "-28214814.560443684"
+										},
+										{
+											"key": "lon",
+											"value": "-28214814.560443684"
+										},
+										{
+											"key": "car_id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/services/pump?lat=-28214814.560443684&lon=-28214814.560443684&car_id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"services",
+												"pump"
+											],
+											"query": [
+												{
+													"key": "lat",
+													"value": "-28214814.560443684"
+												},
+												{
+													"key": "lon",
+													"value": "-28214814.560443684"
+												},
+												{
+													"key": "car_id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"subscription\": {\n    \"title\": \"ex dolore et quis\",\n    \"text\": \"irure occaecat magna\"\n  },\n  \"tariffs\": [\n    {\n      \"type\": \"in deserunt eu\",\n      \"title\": \"consectetur dolore cupidatat\",\n      \"description\": \"tempor exercitation labore\",\n      \"fuel_price_without_discount\": \"culpa in\",\n      \"fuel_price\": \"et qui quis\",\n      \"is_active\": false,\n      \"icon\": \"laborum labore\"\n    },\n    {\n      \"type\": \"et in sunt\",\n      \"title\": \"mollit id\",\n      \"description\": \"est ut Ut\",\n      \"fuel_price_without_discount\": \"ea ex officia occaecat\",\n      \"fuel_price\": \"proident nisi aute in\",\n      \"is_active\": true,\n      \"icon\": \"laboris culpa\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "notifications",
+					"item": [
+						{
+							"name": "Получить список уведомлений",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/notifications?count=70659316&cursor=do qui ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"notifications"
+									],
+									"query": [
+										{
+											"key": "count",
+											"value": "70659316"
+										},
+										{
+											"key": "cursor",
+											"value": "do qui ullamco"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/notifications?count=70659316&cursor=do qui ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"notifications"
+											],
+											"query": [
+												{
+													"key": "count",
+													"value": "70659316"
+												},
+												{
+													"key": "cursor",
+													"value": "do qui ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"grouped_notifications\": [\n    {\n      \"title\": \"sed labore\",\n      \"items\": [\n        {\n          \"title\": \"commodo id tempor ad consequat\",\n          \"body\": \"sit esse nulla\",\n          \"payload\": {},\n          \"created_at\": \"2005-06-25T19:36:01.764Z\",\n          \"is_viewed\": false\n        },\n        {\n          \"title\": \"ut veniam in volupta\",\n          \"body\": \"dolore do\",\n          \"payload\": {},\n          \"created_at\": \"2005-11-12T08:35:17.295Z\",\n          \"is_viewed\": true\n        }\n      ]\n    },\n    {\n      \"title\": \"consequat et do\",\n      \"items\": [\n        {\n          \"title\": \"consectetur enim dolor\",\n          \"body\": \"in dolor\",\n          \"payload\": {},\n          \"created_at\": \"2013-10-22T09:35:40.989Z\",\n          \"is_viewed\": true\n        },\n        {\n          \"title\": \"aliquip anim culpa\",\n          \"body\": \"qui amet sed cupidatat\",\n          \"payload\": {},\n          \"created_at\": \"2000-01-25T12:25:58.864Z\",\n          \"is_viewed\": false\n        }\n      ]\n    }\n  ],\n  \"next_cursor\": \"do cupidatat\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Просмотреть уведомления",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/notifications/view",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"notifications",
+										"view"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Получить заказ",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/orders/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"orders",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"order_id\": \"941575d9-b43a-c0de-565a-dfb24f9b3530\",\n  \"car_id\": \"ce00e768-e584-3f28-d1ca-acfce27d9906\",\n  \"lat\": 1376776.593601197,\n  \"lon\": -19146057.65614228,\n  \"address\": \"et eiusmod\",\n  \"interval_start\": \"1970-06-07T12:09:35.593Z\",\n  \"interval_end\": \"2000-06-10T16:55:50.083Z\",\n  \"max_fuel_volume\": 27583909,\n  \"is_closed_area\": false,\n  \"do_preliminary_call\": true,\n  \"sms_only\": false,\n  \"fuel_volume\": 58125111,\n  \"refueller_route_index\": 19665326,\n  \"order_status_id\": \"urn:uuid:764759d0-f0d8-3455-de04-1d5bef222446\",\n  \"need_for_washer_fluid\": true,\n  \"billing\": {\n    \"kit_price\": 62390914,\n    \"fuel_price\": -34040647,\n    \"delivery_price\": 57412597,\n    \"washer_fluid_price\": 26371642,\n    \"tank_prepayment_price\": 55575432,\n    \"total\": 79342646,\n    \"discount\": -77700559,\n    \"discount_name\": \"reprehenderit officia nisi pariatur\",\n    \"discount_description\": \"labore qui\",\n    \"fuel_discount_pcnt\": 75807924,\n    \"fuel_discount_volume\": -39695244,\n    \"service_discount_pcnt\": 6533483,\n    \"fixed_cost_discount_pcnt\": -54361180,\n    \"fixed_cost_discount\": 11155004,\n    \"cancellation_fee\": -62653196\n  },\n  \"fuel_level\": 52683794,\n  \"cancellation_reason\": \"non qui ut veniam commodo\",\n  \"comment\": \"amet\",\n  \"gas_cap\": true,\n  \"subscription_id\": \"urn:uuid:f00d242d-6a44-bd9f-a4c9-6bc0beb82f39\",\n  \"created_at\": \"1967-10-11T16:26:01.554Z\",\n  \"updated_at\": \"1947-03-14T20:15:56.669Z\",\n  \"is_active\": true,\n  \"count_of_free_deliveries\": -69073675,\n  \"interval_description\": \"non consequat Excepteur sed\",\n  \"estimated_time\": 46056622,\n  \"summary\": [\n    {\n      \"key\": \"amet nulla ex Excepteur ut\",\n      \"description\": \"deserunt nulla est\",\n      \"description_color\": \"ut esse est\",\n      \"value\": \"ex\",\n      \"value_color\": \"aliquip\",\n      \"is_bold\": true\n    },\n    {\n      \"key\": \"labore elit\",\n      \"description\": \"tempor qui et laboris cupidatat\",\n      \"description_color\": \"cillu\",\n      \"value\": \"dolore in\",\n      \"value_color\": \"magna do\",\n      \"is_bold\": true\n    }\n  ],\n  \"should_share_referral_code\": true,\n  \"car\": {\n    \"car_id\": \"urn:uuid:5e83d258-3f2e-04a7-5b59-6a133e7d4927\",\n    \"color\": \"in ull\",\n    \"number\": \"dolore Duis qui Excepteur\",\n    \"image\": \"minim sed est\",\n    \"model\": \"mollit quis ad\",\n    \"fuel_type\": \"ullamco qui sed officia\",\n    \"fuel_color\": \"m\"\n  },\n  \"status\": {\n    \"order_status_id\": \"urn:uuid:c79754eb-ab2d-d1c7-7788-6046555078b9\",\n    \"name\": \"nisi\",\n    \"display_name\": \"sunt consectetur\"\n  },\n  \"refueller\": {\n    \"user_id\": \"Excepteur Lorem\",\n    \"phone\": \"eiusmod sint ipsum et o\",\n    \"first_name\": \"sint aute\",\n    \"last_name\": \"labore Duis est\",\n    \"full_name\": \"dolor eiusmod velit tempor\",\n    \"avatar\": \"adipisicing deserunt magna fugiat\",\n    \"rating\": 6541280.8634056\n  },\n  \"tanker\": {\n    \"model\": \"ut Ut eiusmod sint\",\n    \"number\": \"enim\",\n    \"lat\": -66504932.69259754,\n    \"lon\": -83917309.07258928,\n    \"bearing\": -90068055.51558599\n  },\n  \"actual_bonus_points\": 61725248,\n  \"bonus_points_to_earn\": -94120832,\n  \"bonus_points_to_spend\": 61682081\n}"
+										}
+									]
+								},
+								{
+									"name": "Обновить заказ",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"lat\": 32494466.044099733,\n  \"lon\": 42728011.50849292,\n  \"address\": \"nisi mollit cillum veniam\",\n  \"interval_start\": \"1964-08-24T12:46:24.891Z\",\n  \"interval_end\": \"1966-12-11T13:48:44.007Z\",\n  \"max_fuel_volume\": 36655156,\n  \"is_closed_area\": false,\n  \"do_preliminary_call\": false,\n  \"comment\": \"ea voluptate occaecat anim aliquip\",\n  \"sms_only\": true,\n  \"need_for_washer_fluid\": false,\n  \"fuel_level\": -56826738,\n  \"gate\": \"tempor proident labore et esse\",\n  \"fuel_type_id\": \"328b464c-7163-0bd4-3d0d-f9223bcd75df\",\n  \"type\": \"<string>\",\n  \"should_spend_bonus_points\": false,\n  \"confirmed\": false\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"lat\": 32494466.044099733,\n  \"lon\": 42728011.50849292,\n  \"address\": \"nisi mollit cillum veniam\",\n  \"interval_start\": \"1964-08-24T12:46:24.891Z\",\n  \"interval_end\": \"1966-12-11T13:48:44.007Z\",\n  \"max_fuel_volume\": 36655156,\n  \"is_closed_area\": false,\n  \"do_preliminary_call\": false,\n  \"comment\": \"ea voluptate occaecat anim aliquip\",\n  \"sms_only\": true,\n  \"need_for_washer_fluid\": false,\n  \"fuel_level\": -56826738,\n  \"gate\": \"tempor proident labore et esse\",\n  \"fuel_type_id\": \"328b464c-7163-0bd4-3d0d-f9223bcd75df\",\n  \"type\": \"<string>\",\n  \"should_spend_bonus_points\": false,\n  \"confirmed\": false\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/orders/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"orders",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"order\": {\n    \"order_id\": \"a5f87a3a-e29b-fdf8-9159-a17d5f189ff6\",\n    \"car_id\": \"9042ed88-5a13-aa3b-06ae-cc62ccdb231f\",\n    \"lat\": -54806951.03891975,\n    \"lon\": -64470338.8838296,\n    \"address\": \"qui pr\",\n    \"interval_start\": \"2021-12-21T21:04:18.473Z\",\n    \"interval_end\": \"2016-03-04T03:58:24.609Z\",\n    \"max_fuel_volume\": 20845860,\n    \"is_closed_area\": false,\n    \"do_preliminary_call\": true,\n    \"sms_only\": true,\n    \"fuel_volume\": 48569919,\n    \"refueller_route_index\": 61176914,\n    \"order_status_id\": \"62d76fef-7c2e-9f77-a9b4-ed9346c31eba\",\n    \"need_for_washer_fluid\": false,\n    \"billing\": {\n      \"kit_price\": 96446001,\n      \"fuel_price\": 16969418,\n      \"delivery_price\": -63037705,\n      \"washer_fluid_price\": 56133857,\n      \"tank_prepayment_price\": -51730283,\n      \"total\": -36991035,\n      \"discount\": 43684779,\n      \"discount_name\": \"ipsum ea Ut sit\",\n      \"discount_description\": \"voluptate commodo i\",\n      \"fuel_discount_pcnt\": 91811069,\n      \"fuel_discount_volume\": -79258190,\n      \"service_discount_pcnt\": 87933063,\n      \"fixed_cost_discount_pcnt\": 66597222,\n      \"fixed_cost_discount\": 63079002,\n      \"cancellation_fee\": 69348111\n    },\n    \"fuel_level\": -82489655,\n    \"cancellation_reason\": \"Excepteur\",\n    \"comment\": \"Excepteur elit officia quis\",\n    \"gas_cap\": false,\n    \"subscription_id\": \"urn:uuid:99b01310-3dc9-7433-2080-5613d0cda5b8\",\n    \"created_at\": \"1988-05-13T12:27:24.813Z\",\n    \"updated_at\": \"1988-01-17T09:51:09.008Z\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Отменить заказ",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Отменить заказ, указав причину",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reason\": \"deserunt officia\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id/cancellation",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id",
+												"cancellation"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Получить интервалы заправки",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id/intervals",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id",
+												"intervals"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/orders/:id/intervals",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"orders",
+														":id",
+														"intervals"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"intervals\": [\n    {\n      \"interval_start\": \"1966-03-04T11:52:09.731Z\",\n      \"interval_end\": \"2004-01-09T23:35:27.595Z\",\n      \"interval_description\": \"elit la\"\n    },\n    {\n      \"interval_start\": \"1977-05-07T08:08:21.707Z\",\n      \"interval_end\": \"1947-04-06T22:26:10.524Z\",\n      \"interval_description\": \"aute dolor eiusmod commodo\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Выставить оценку заправщику",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"value\": 99548499,\n  \"comment\": \"eiusmod exercitation do\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id/rating",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id",
+												"rating"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": 99548499,\n  \"comment\": \"eiusmod exercitation do\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/orders/:id/rating",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"orders",
+														":id",
+														"rating"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"rating\": {\n    \"id\": \"urn:uuid:b7f8b0d2-d050-4217-478d-5882f870f7c4\",\n    \"value\": 56396010,\n    \"comment\": \"occaecat\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Уведомить об открытии лючка",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"minutes\": 69400374\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/:id/flap-notification",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												":id",
+												"flap-notification"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Создать заказ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"car_id\": \"c9693bc6-0c30-b384-4167-722b31590f62\",\n  \"lat\": 60608653.13143903,\n  \"lon\": 15461785.459361807,\n  \"address\": \"consectetur consequat et est irure\",\n  \"interval_start\": \"1986-02-22T17:50:33.228Z\",\n  \"interval_end\": \"2001-11-17T18:29:41.893Z\",\n  \"max_fuel_volume\": 18848164,\n  \"is_closed_area\": false,\n  \"do_preliminary_call\": false,\n  \"comment\": \"ut\",\n  \"sms_only\": true,\n  \"need_for_washer_fluid\": true,\n  \"fuel_level\": -97870425,\n  \"gate\": \"fugiat occaecat eiusmod elit\",\n  \"fuel_type_id\": \"urn:uuid:2094f68c-e886-3faf-33ea-552b5a75dc49\",\n  \"type\": \"<string>\",\n  \"should_spend_bonus_points\": true,\n  \"confirmed\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"car_id\": \"c9693bc6-0c30-b384-4167-722b31590f62\",\n  \"lat\": 60608653.13143903,\n  \"lon\": 15461785.459361807,\n  \"address\": \"consectetur consequat et est irure\",\n  \"interval_start\": \"1986-02-22T17:50:33.228Z\",\n  \"interval_end\": \"2001-11-17T18:29:41.893Z\",\n  \"max_fuel_volume\": 18848164,\n  \"is_closed_area\": false,\n  \"do_preliminary_call\": false,\n  \"comment\": \"ut\",\n  \"sms_only\": true,\n  \"need_for_washer_fluid\": true,\n  \"fuel_level\": -97870425,\n  \"gate\": \"fugiat occaecat eiusmod elit\",\n  \"fuel_type_id\": \"urn:uuid:2094f68c-e886-3faf-33ea-552b5a75dc49\",\n  \"type\": \"<string>\",\n  \"should_spend_bonus_points\": true,\n  \"confirmed\": false\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"order_id\": \"urn:uuid:496a7224-06c4-37bf-5d9e-640ea9da9fea\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список заказов",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/orders?is_active=true&page=70659316&count=70659316&group_by_created_at=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									],
+									"query": [
+										{
+											"key": "is_active",
+											"value": "true"
+										},
+										{
+											"key": "page",
+											"value": "70659316"
+										},
+										{
+											"key": "count",
+											"value": "70659316"
+										},
+										{
+											"key": "group_by_created_at",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/orders?is_active=true&page=70659316&count=70659316&group_by_created_at=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "is_active",
+													"value": "true"
+												},
+												{
+													"key": "page",
+													"value": "70659316"
+												},
+												{
+													"key": "count",
+													"value": "70659316"
+												},
+												{
+													"key": "group_by_created_at",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"orders\": [\n    {\n      \"order_id\": \"urn:uuid:0d8b1e66-6c8e-6833-6ec7-5fe14e49519e\",\n      \"car_id\": \"urn:uuid:b0b3770d-da7e-1d38-a5f6-172798cea79c\",\n      \"lat\": -42728832.14350367,\n      \"lon\": 1051410.2427283674,\n      \"address\": \"pariatur Excepteur o\",\n      \"interval_start\": \"1998-03-06T01:03:05.807Z\",\n      \"interval_end\": \"1984-08-22T16:57:30.233Z\",\n      \"max_fuel_volume\": -63508758,\n      \"is_closed_area\": false,\n      \"do_preliminary_call\": false,\n      \"sms_only\": true,\n      \"fuel_volume\": -87281341,\n      \"refueller_route_index\": 2359439,\n      \"order_status_id\": \"4c95e0f2-10f3-a065-c6a7-e562aa1f0640\",\n      \"need_for_washer_fluid\": true,\n      \"billing\": {\n        \"kit_price\": 15732525,\n        \"fuel_price\": 83298307,\n        \"delivery_price\": -97185695,\n        \"washer_fluid_price\": -82058898,\n        \"tank_prepayment_price\": -64562476,\n        \"total\": -97291703,\n        \"discount\": 72245598,\n        \"discount_name\": \"dolore\",\n        \"discount_description\": \"aliquip\",\n        \"fuel_discount_pcnt\": -64014524,\n        \"fuel_discount_volume\": -10793467,\n        \"service_discount_pcnt\": 76658529,\n        \"fixed_cost_discount_pcnt\": 68384311,\n        \"fixed_cost_discount\": 13064792,\n        \"cancellation_fee\": -30970493\n      },\n      \"fuel_level\": -31202812,\n      \"cancellation_reason\": \"\",\n      \"comment\": \"laborum aliquip sunt dolor\",\n      \"gas_cap\": true,\n      \"subscription_id\": \"2c1f8da9-c700-fd78-76c6-9cf1353ad949\",\n      \"created_at\": \"1964-09-17T05:42:46.186Z\",\n      \"updated_at\": \"1948-02-07T15:15:34.585Z\",\n      \"is_active\": false,\n      \"count_of_free_deliveries\": -39500738,\n      \"interval_description\": \"Duis amet\",\n      \"estimated_time\": -52711280,\n      \"summary\": [\n        {\n          \"key\": \"velit anim ea\",\n          \"description\": \"aliquip Excepteur Ut\",\n          \"description_color\": \"Duis\",\n          \"value\": \"aliqua sit do\",\n          \"value_color\": \"velit Lorem Excepteur\",\n          \"is_bold\": false\n        },\n        {\n          \"key\": \"proident id dolor cillum mollit\",\n          \"description\": \"Ut cupidatat veniam consequat\",\n          \"description_color\": \"deserunt in\",\n          \"value\": \"est aliqua\",\n          \"value_color\": \"culpa magna aliqua ad\",\n          \"is_bold\": true\n        }\n      ],\n      \"should_share_referral_code\": true,\n      \"car\": {\n        \"car_id\": \"urn:uuid:e7d37bba-442f-3f3c-cc5b-266ae54e445b\",\n        \"color\": \"Lorem quis aute elit\",\n        \"number\": \"est Excepteur consequat\",\n        \"image\": \"dolore do Lorem\",\n        \"model\": \"incididunt dolor ex\",\n        \"fuel_type\": \"eiusmod voluptate et labore amet\",\n        \"fuel_color\": \"nulla mollit Ut dolore\"\n      },\n      \"status\": {\n        \"order_status_id\": \"urn:uuid:2b22dc46-3523-2bc4-3625-9a6b55b3ed71\",\n        \"name\": \"laboris Duis in pariatur proident\",\n        \"display_name\": \"elit\"\n      },\n      \"refueller\": {\n        \"user_id\": \"commodo adipisicing labore enim\",\n        \"phone\": \"dolore Excepteur ut non id\",\n        \"first_name\": \"ut veniam aliquip officia\",\n        \"last_name\": \"esse cillum\",\n        \"full_name\": \"voluptate aliquip officia ut irure\",\n        \"avatar\": \"incididunt Excepteur est\",\n        \"rating\": 39469322.771977514\n      },\n      \"tanker\": {\n        \"model\": \"commodo\",\n        \"number\": \"Ut consequat ea\",\n        \"lat\": -92559945.86200123,\n        \"lon\": -6561599.905843258,\n        \"bearing\": -89563283.10430974\n      },\n      \"badge\": {\n        \"text\": \"labore dolor ut commodo\",\n        \"text_color\": \"proident ut in dolor\",\n        \"background_color\": \"sit aute exercitation\"\n      },\n      \"status_details\": {\n        \"text\": \"exercitation laborum\",\n        \"text_color\": \"in Duis ex\"\n      },\n      \"icon\": \"ea sed\"\n    },\n    {\n      \"order_id\": \"4a7eab59-55ee-d53b-a3bd-d79ec34956dc\",\n      \"car_id\": \"urn:uuid:07733e19-1f67-f572-b15a-d5b68c686175\",\n      \"lat\": 69545989.80718482,\n      \"lon\": -26187122.92100303,\n      \"address\": \"sint exercitation in ullamco\",\n      \"interval_start\": \"1971-05-22T06:01:31.857Z\",\n      \"interval_end\": \"1956-12-27T20:00:35.727Z\",\n      \"max_fuel_volume\": -42207816,\n      \"is_closed_area\": false,\n      \"do_preliminary_call\": true,\n      \"sms_only\": true,\n      \"fuel_volume\": -31075216,\n      \"refueller_route_index\": -24818465,\n      \"order_status_id\": \"urn:uuid:72cf12c0-a2e2-02f6-2dba-958a25f5d6a4\",\n      \"need_for_washer_fluid\": false,\n      \"billing\": {\n        \"kit_price\": 11170383,\n        \"fuel_price\": 88213625,\n        \"delivery_price\": -35445709,\n        \"washer_fluid_price\": 80354052,\n        \"tank_prepayment_price\": 55937717,\n        \"total\": 70827069,\n        \"discount\": 42436895,\n        \"discount_name\": \"ex esse sit\",\n        \"discount_description\": \"non adipisicing\",\n        \"fuel_discount_pcnt\": -14783518,\n        \"fuel_discount_volume\": -13237896,\n        \"service_discount_pcnt\": 26385353,\n        \"fixed_cost_discount_pcnt\": 63999185,\n        \"fixed_cost_discount\": 52272659,\n        \"cancellation_fee\": 37619100\n      },\n      \"fuel_level\": -76089323,\n      \"cancellation_reason\": \"irure tempor\",\n      \"comment\": \"ut quis do in\",\n      \"gas_cap\": true,\n      \"subscription_id\": \"urn:uuid:a8e1f3f6-93dc-cb0b-8e2a-4163edeaf509\",\n      \"created_at\": \"1956-04-20T23:29:58.348Z\",\n      \"updated_at\": \"1992-09-30T23:50:51.800Z\",\n      \"is_active\": true,\n      \"count_of_free_deliveries\": 95367959,\n      \"interval_description\": \"Ut do\",\n      \"estimated_time\": 23840841,\n      \"summary\": [\n        {\n          \"key\": \"sint ex qui\",\n          \"description\": \"voluptate ad consectetur sint\",\n          \"description_color\": \"voluptate\",\n          \"value\": \"eu officia\",\n          \"value_color\": \"pariatur\",\n          \"is_bold\": false\n        },\n        {\n          \"key\": \"voluptate et\",\n          \"description\": \"do\",\n          \"description_color\": \"magna mollit ex\",\n          \"value\": \"Duis consequat velit esse\",\n          \"value_color\": \"adipisicing exerci\",\n          \"is_bold\": true\n        }\n      ],\n      \"should_share_referral_code\": true,\n      \"car\": {\n        \"car_id\": \"1f4b06bd-b0bd-48bf-362a-28ce0c2d3e24\",\n        \"color\": \"laborum aliqua labore id\",\n        \"number\": \"ut cupi\",\n        \"image\": \"occaecat aliqua labore\",\n        \"model\": \"ad cillum incididunt conseq\",\n        \"fuel_type\": \"magna laboris\",\n        \"fuel_color\": \"Lorem culpa\"\n      },\n      \"status\": {\n        \"order_status_id\": \"urn:uuid:a42f4d29-93e2-a2a7-0397-4a6f0d1d49ce\",\n        \"name\": \"Ut\",\n        \"display_name\": \"ut\"\n      },\n      \"refueller\": {\n        \"user_id\": \"sunt sint ad anim\",\n        \"phone\": \"minim sunt reprehenderit\",\n        \"first_name\": \"\",\n        \"last_name\": \"labore sunt commodo\",\n        \"full_name\": \"reprehenderit in\",\n        \"avatar\": \"enim\",\n        \"rating\": -25148726.25731103\n      },\n      \"tanker\": {\n        \"model\": \"in et sunt tempor ut\",\n        \"number\": \"aliquip c\",\n        \"lat\": -2906880.1238654703,\n        \"lon\": 98705665.25856015,\n        \"bearing\": -10394184.260723278\n      },\n      \"badge\": {\n        \"text\": \"ut veniam\",\n        \"text_color\": \"aliquip amet irure\",\n        \"background_color\": \"ut consectetur consequat in in\"\n      },\n      \"status_details\": {\n        \"text\": \"velit ut pariatur fugiat\",\n        \"text_color\": \"ullamco\"\n      },\n      \"icon\": \"sint proident laboris sed magna\"\n    }\n  ],\n  \"count\": -46381642\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список причин для отмены заказа",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/orders/cancellation-reasons",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"cancellation-reasons"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/orders/cancellation-reasons",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												"cancellation-reasons"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cancellation_reasons\": [\n    {\n      \"message\": \"reprehenderit ut nulla est tempor\"\n    },\n    {\n      \"message\": \"consequat culpa\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "me",
+					"item": [
+						{
+							"name": "Получить информацию о пользователе",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"user_id\": \"38432a23-2156-656c-055b-eb2a8ae697d6\",\n  \"first_name\": \"sint Ut\",\n  \"last_name\": \"commodo dolo\",\n  \"phone\": \"quis et proident\",\n  \"role\": \"sint Duis\",\n  \"is_eula_signed\": true,\n  \"company_id\": \"58f81560-83d8-8e7f-eda5-e9cd3b789d34\",\n  \"email\": \"Ut qui dolor\",\n  \"avatar\": \"dolore eiusmod labore elit\",\n  \"support_phone\": \"laborum cillum\",\n  \"actual_bonus_points\": -35292811,\n  \"cashback_details\": {\n    \"level\": -37525444,\n    \"percentage\": -12729169,\n    \"next_level_text\": \"magna Lorem anim non ea\",\n    \"range\": {\n      \"current_value_text\": \"ad in cupidatat et anim\",\n      \"max_value_text\": \"ea eu amet cupidatat\",\n      \"value\": 78299859.53988677\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Обновить информацию о пользователе",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"ullamco est et\",\n  \"last_name\": \"culpa eu do Duis\",\n  \"email\": \"ad est fugiat\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить аккаунт",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "avatar",
+					"item": [
+						{
+							"name": "Загрузить аватар",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/avatar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avatar"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "avatar",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/avatar",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"avatar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"avatar\": \"ad enim\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Удалить аватар",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/avatar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "promo-actions",
+					"item": [
+						{
+							"name": "Получить список акций",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/promo-actions?id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"promo-actions"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/promo-actions?id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"promo-actions"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"promo_actions\": [\n    {\n      \"id\": \"7429b6ef-0238-06fc-b9f5-309bf92dc92b\",\n      \"title\": \"enim fugiat aliqua\",\n      \"description\": \"nostrud fugiat ut veniam sit\",\n      \"expired_at\": \"1976-01-12T13:15:16.030Z\",\n      \"small_image\": \"commodo dolor eu\",\n      \"image\": \"magna irure\",\n      \"document\": \"eiusmod ullamco commodo enim\",\n      \"shared_text\": \"ex\"\n    },\n    {\n      \"id\": \"urn:uuid:aad1c159-22a4-a17f-b28f-a9b6ea7ab808\",\n      \"title\": \"sed irure occaecat\",\n      \"description\": \"Ut\",\n      \"expired_at\": \"2014-11-24T20:47:52.189Z\",\n      \"small_image\": \"tempor aliquip Excepteur dolore\",\n      \"image\": \"anim ut sint\",\n      \"document\": \"enim et in\",\n      \"shared_text\": \"est exercitat\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Просмотреть акцию",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/promo-actions/:id/view",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"promo-actions",
+										":id",
+										"view"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "referral-invites",
+					"item": [
+						{
+							"name": "Связать пригласителя с приглашенным",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"inviter_id\": \"urn:uuid:4abd14f0-7cf5-6c11-c763-b363f53fd746\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/referral-invites",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"referral-invites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить реферальную информацию",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/referral-invites/info",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"referral-invites",
+										"info"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/referral-invites/info",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"referral-invites",
+												"info"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"count_of_invitees\": -25500054.381508484,\n  \"count_of_orders\": 63398893.3176108,\n  \"referral_cashback\": 7201632.7384940535\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Отменить подписку",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reason\": \"deserunt officia\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Возобновить подписку",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions/:id/resume",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions",
+												":id",
+												"resume"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Создать подписку",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"car_id\": \"7c62e18a-8d1d-6ec8-e4cd-5867272fc979\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/subscriptions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subscriptions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"car_id\": \"7c62e18a-8d1d-6ec8-e4cd-5867272fc979\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"subscription\": {\n    \"id\": \"urn:uuid:9eb974e6-d917-d8ac-68b1-f8f4b1c1a52b\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список подписок",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/subscriptions?count=70659316&cursor=do qui ullamco&is_active=true&type=pro",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "count",
+											"value": "70659316"
+										},
+										{
+											"key": "cursor",
+											"value": "do qui ullamco"
+										},
+										{
+											"key": "is_active",
+											"value": "true"
+										},
+										{
+											"key": "type",
+											"value": "pro"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions?count=70659316&cursor=do qui ullamco&is_active=true&type=pro",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions"
+											],
+											"query": [
+												{
+													"key": "count",
+													"value": "70659316"
+												},
+												{
+													"key": "cursor",
+													"value": "do qui ullamco"
+												},
+												{
+													"key": "is_active",
+													"value": "true"
+												},
+												{
+													"key": "type",
+													"value": "pro"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"subscriptions\": [\n    {\n      \"id\": \"aliquip Duis\",\n      \"finished_at\": \"2017-09-11T15:25:57.681Z\",\n      \"total\": 45005255,\n      \"can_be_cancelled\": false,\n      \"can_be_resumed\": true,\n      \"count_of_free_deliveries\": -72310015,\n      \"max_count_of_free_deliveries\": -19275894,\n      \"car\": {\n        \"color\": \"sunt laboris\",\n        \"number\": \"eiusmod est\",\n        \"model\": \"aliquip irure mollit\",\n        \"image\": \"do in dolor ullamco\"\n      }\n    },\n    {\n      \"id\": \"comm\",\n      \"finished_at\": \"2004-04-06T17:28:55.377Z\",\n      \"total\": 98342002,\n      \"can_be_cancelled\": false,\n      \"can_be_resumed\": false,\n      \"count_of_free_deliveries\": -49453845,\n      \"max_count_of_free_deliveries\": 32920659,\n      \"car\": {\n        \"color\": \"exercitation dolor est elit incididunt\",\n        \"number\": \"adipisicing\",\n        \"model\": \"consectetur\",\n        \"image\": \"ut dolore amet officia\"\n      }\n    }\n  ],\n  \"next_cursor\": \"fugiat elit\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список причин для отмены подписки",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/subscriptions/cancellation-reasons",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subscriptions",
+										"cancellation-reasons"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions/cancellation-reasons",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions",
+												"cancellation-reasons"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cancellation_reasons\": [\n    {\n      \"message\": \"reprehenderit ut nulla est tempor\"\n    },\n    {\n      \"message\": \"consequat culpa\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить информацию о ценах подписок",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/subscriptions/info",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subscriptions",
+										"info"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/subscriptions/info",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subscriptions",
+												"info"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"lite\": {\n    \"price\": 82882640,\n    \"max_count_of_free_deliveries\": 66709358\n  },\n  \"pro\": {\n    \"price\": 60205023\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "vehicle-groups",
+					"item": [
+						{
+							"name": "Получить список марок",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicle-groups?name=do qui ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicle-groups"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "do qui ullamco"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/vehicle-groups?name=do qui ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"vehicle-groups"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "do qui ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"vehicle_groups\": [\n    {\n      \"vehicle_group_id\": \"urn:uuid:e6f7cb6a-41e6-5662-e096-71e173154331\",\n      \"name\": \"commodo officia\"\n    },\n    {\n      \"vehicle_group_id\": \"1e158183-e405-2e63-7382-451df5e1416e\",\n      \"name\": \"culpa dolor veniam\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Создать марку",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"labore laborum\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicle-groups",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicle-groups"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"labore laborum\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/vehicle-groups",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"vehicle-groups"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"vehicle_group\": {\n    \"vehicle_group_id\": \"a73824d1-1270-c329-8399-0652e02cd188\",\n    \"name\": \"laboris reprehenderit culpa\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список моделей конкретной марки",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicle-groups/:id/vehicle-models?name=do qui ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicle-groups",
+										":id",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "do qui ullamco"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/vehicle-groups/:id/vehicle-models?name=do qui ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"vehicle-groups",
+												":id",
+												"vehicle-models"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "do qui ullamco"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"vehicle_models\": [\n    {\n      \"vehicle_model_id\": \"7dc6e01c-29a8-ec39-6384-d063809feac8\",\n      \"name\": \"veniam aute Ut\"\n    },\n    {\n      \"vehicle_model_id\": \"6c6d51cd-c69a-2ae6-f07b-8bf72c21b926\",\n      \"name\": \"in\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "vehicle-models",
+					"item": [
+						{
+							"name": "Получить список моделей",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicle-models?name=do qui ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "do qui ullamco"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/vehicle-models?name=do qui ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"vehicle-models"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "do qui ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"vehicle_models\": [\n    {\n      \"vehicle_model_id\": \"b257ab19-dce2-9cf3-aac2-acb2f27372b7\",\n      \"name\": \"anim ipsum\"\n    },\n    {\n      \"vehicle_model_id\": \"4a7e7dd4-3be3-d974-b8b3-f6dda61657e6\",\n      \"name\": \"non deseru\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Создать модель",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"vehicle_group_id\": \"7ad3526f-4609-e738-62fc-2b75ead17db7\",\n  \"name\": \"proident sed veniam\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicle-models",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicle-models"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"vehicle_group_id\": \"7ad3526f-4609-e738-62fc-2b75ead17db7\",\n  \"name\": \"proident sed veniam\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/vehicle-models",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"vehicle-models"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"vehicle_model\": {\n    \"vehicle_model_id\": \"00e3ce51-5cce-9432-5122-066882456b3f\",\n    \"name\": \"ad dolore\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "wash-orders",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Получить заказ",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/wash-orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wash-orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/wash-orders/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"wash-orders",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"wash_order\": {\n    \"id\": \"urn:uuid:abf2957d-e029-af7c-7e8d-619d95d35078\",\n    \"total\": 2608267,\n    \"will_be_cancelled_at\": \"2013-03-25T11:24:57.367Z\",\n    \"status\": \"commodo\",\n    \"finished_at\": \"1943-06-09T20:25:22.688Z\",\n    \"can_be_cancelled\": false,\n    \"note\": \"in\",\n    \"car\": {\n      \"image\": \"id fugiat\",\n      \"color\": \"occaecat do laboris incididunt reprehenderit\",\n      \"number\": \"m\",\n      \"model\": \"esse in\"\n    },\n    \"wash\": {\n      \"lat\": 77708841.33898422,\n      \"lon\": -52235056.10972294,\n      \"address\": \"ea culpa do\",\n      \"photo\": \"id esse fugiat officia\",\n      \"pin\": \"est non commodo sint\"\n    },\n    \"options\": [\n      {\n        \"name\": \"qui ad\",\n        \"price\": -76809648\n      },\n      {\n        \"name\": \"et\",\n        \"price\": 33440389\n      }\n    ],\n    \"summary\": [\n      {\n        \"key\": \"sit in eu irure\",\n        \"description\": \"fugiat\",\n        \"description_color\": \"ad qui sunt\",\n        \"value\": \"ut sed ipsum pariatur\",\n        \"value_color\": \"proident anim\",\n        \"is_bold\": false\n      },\n      {\n        \"key\": \"fugiat\",\n        \"description\": \"esse ut non\",\n        \"description_color\": \"sint sit minim incididunt\",\n        \"value\": \"ut dolore laborum\",\n        \"value_color\": \"et ullamco sint\",\n        \"is_bold\": false\n      }\n    ],\n    \"should_share_referral_code\": true\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Отменить заказ",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reason\": \"deserunt officia\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/wash-orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wash-orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Создать заказ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"car_id\": \"025bff79-282e-94e6-e1f3-4c84924b856b\",\n  \"wash_id\": \"urn:uuid:3decdc46-4b62-2d2b-b584-749b794c8c55\",\n  \"options\": [\n    \"urn:uuid:548db5f4-9f96-3920-61f8-9336726e1b44\",\n    \"0d66547d-d07d-2e6e-2b90-d78111d35785\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/wash-orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"wash-orders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"car_id\": \"85df281a-3f1b-a424-d877-56987a7a3233\",\n  \"wash_id\": \"2d3edd38-5167-495e-67ad-caf754ec57d3\",\n  \"options\": [\n    \"urn:uuid:5113989a-55e2-5d9a-eadc-fa909b874d71\",\n    \"urn:uuid:54588e75-33c7-a35d-4bd0-ef76dc123a13\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/wash-orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wash-orders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"wash_order\": {\n    \"id\": \"urn:uuid:d4a8bf3e-0433-63aa-192a-c8239dbafb4d\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список заказов",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/wash-orders?page=70659316&count=70659316&group_by_created_at=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"wash-orders"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "70659316"
+										},
+										{
+											"key": "count",
+											"value": "70659316"
+										},
+										{
+											"key": "group_by_created_at",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/wash-orders?page=70659316&count=70659316&group_by_created_at=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wash-orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "70659316"
+												},
+												{
+													"key": "count",
+													"value": "70659316"
+												},
+												{
+													"key": "group_by_created_at",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"wash_orders\": [\n    {\n      \"id\": \"73a04e30-6b34-26be-7ec7-3efdf42a3da0\",\n      \"total\": -11196084,\n      \"will_be_cancelled_at\": \"2004-01-19T18:03:41.508Z\",\n      \"status\": \"incididunt velit officia\",\n      \"finished_at\": \"1975-08-31T02:24:27.477Z\",\n      \"can_be_cancelled\": true,\n      \"note\": \"Excepteur est dolor\",\n      \"car\": {\n        \"image\": \"quis labore deserunt ut\",\n        \"color\": \"eiusmod ipsum\",\n        \"number\": \"aliquip velit ut pariatur ullamco\",\n        \"model\": \"ea magna est Lorem\"\n      },\n      \"wash\": {\n        \"lat\": 51978441.251999766,\n        \"lon\": -54544233.978469014,\n        \"address\": \"eu est quis\",\n        \"photo\": \"labore id\",\n        \"pin\": \"laborum tempor Duis u\"\n      },\n      \"options\": [\n        {\n          \"name\": \"magna Lorem labore voluptate\",\n          \"price\": -58499077\n        },\n        {\n          \"name\": \"ex id consequat\",\n          \"price\": -50894379\n        }\n      ],\n      \"summary\": [\n        {\n          \"key\": \"esse nisi in magna\",\n          \"description\": \"c\",\n          \"description_color\": \"non qui exercitation\",\n          \"value\": \"do ut sint eiusmod reprehenderit\",\n          \"value_color\": \"occaecat \",\n          \"is_bold\": false\n        },\n        {\n          \"key\": \"fugiat nostrud cillum dolor\",\n          \"description\": \"do mollit veniam\",\n          \"description_color\": \"cupidatat pariatur anim\",\n          \"value\": \"Ut adipisicing nisi consectetur\",\n          \"value_color\": \"nulla esse reprehenderit quis\",\n          \"is_bold\": false\n        }\n      ],\n      \"should_share_referral_code\": false,\n      \"badge\": {\n        \"text\": \"sed tempor amet esse\",\n        \"text_color\": \"irure nostrud\",\n        \"background_color\": \"\"\n      },\n      \"status_details\": {\n        \"text\": \"enim tempor aliquip ad\",\n        \"text_color\": \"in\"\n      }\n    },\n    {\n      \"id\": \"7adee23c-0a65-a29d-45db-61ed2a79b193\",\n      \"total\": 53636315,\n      \"will_be_cancelled_at\": \"1998-09-06T16:14:27.346Z\",\n      \"status\": \"deserunt\",\n      \"finished_at\": \"1982-05-08T19:46:48.293Z\",\n      \"can_be_cancelled\": true,\n      \"note\": \"sunt aliqua\",\n      \"car\": {\n        \"image\": \"occaecat sunt officia\",\n        \"color\": \"exercitation nisi\",\n        \"number\": \"minim in et\",\n        \"model\": \"nisi sed pariatur\"\n      },\n      \"wash\": {\n        \"lat\": -26426377.449009538,\n        \"lon\": -13457371.314246684,\n        \"address\": \"culpa officia\",\n        \"photo\": \"nisi sunt ullamco voluptate\",\n        \"pin\": \"exercitation nulla et dolore incididunt\"\n      },\n      \"options\": [\n        {\n          \"name\": \"nostrud Duis in dolore\",\n          \"price\": -35836308\n        },\n        {\n          \"name\": \"do culpa pariatur\",\n          \"price\": 14628875\n        }\n      ],\n      \"summary\": [\n        {\n          \"key\": \"laboris elit amet\",\n          \"description\": \"Ut pariatur cillum nostrud mollit\",\n          \"description_color\": \"laborum dolore dolor anim\",\n          \"value\": \"officia\",\n          \"value_color\": \"deserunt aute in voluptate laborum\",\n          \"is_bold\": false\n        },\n        {\n          \"key\": \"tempor fugiat occaecat minim\",\n          \"description\": \"laboris ea ipsum ullamco\",\n          \"description_color\": \"voluptate a\",\n          \"value\": \"ea\",\n          \"value_color\": \"exercitation Excepteur minim\",\n          \"is_bold\": false\n        }\n      ],\n      \"should_share_referral_code\": true,\n      \"badge\": {\n        \"text\": \"mollit Du\",\n        \"text_color\": \"proident\",\n        \"background_color\": \"esse in deserunt dolore\"\n      },\n      \"status_details\": {\n        \"text\": \"mollit esse deserunt fugiat\",\n        \"text_color\": \"nostrud\"\n      }\n    }\n  ],\n  \"count\": -36065095\n}"
+								}
+							]
+						},
+						{
+							"name": "Получить список причин для отмены заказа",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/wash-orders/cancellation-reasons",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"wash-orders",
+										"cancellation-reasons"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/wash-orders/cancellation-reasons",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wash-orders",
+												"cancellation-reasons"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cancellation_reasons\": [\n    {\n      \"message\": \"reprehenderit ut nulla est tempor\"\n    },\n    {\n      \"message\": \"consequat culpa\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Создать команду",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"barrel_order_id\": \"3a1740a2-3a86-3a53-d020-4ea9047134f5\",\n  \"command\": \"finish\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/barrel-commands",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"barrel-commands"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"barrel_order_id\": \"3a1740a2-3a86-3a53-d020-4ea9047134f5\",\n  \"command\": \"finish\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/barrel-commands",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"barrel-commands"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"barrel_command\": {\n    \"id\": \"db1faeac-47fd-3f7d-780c-e27a43550f4c\",\n    \"barrel_order_id\": \"urn:uuid:fb70e884-90af-7a72-21c4-b96d0c3a9756\",\n    \"name\": \"ut minim\",\n    \"status\": \"pending\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить данные для добавления карты",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/acquirer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"acquirer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/acquirer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"acquirer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"pk\": \"qui minim enim deserunt\",\n  \"amount\": \"nisi\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Добавить новое устройство",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"ios\",\n  \"push_token\": \"Duis\",\n  \"id\": \"cupidatat amet commodo\",\n  \"name\": \"aliqua ut\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/devices",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список типов топлива",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/fuel-types?lat=-28214814.560443684&lon=-28214814.560443684&car_id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d&type=regular",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"fuel-types"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "-28214814.560443684"
+								},
+								{
+									"key": "lon",
+									"value": "-28214814.560443684"
+								},
+								{
+									"key": "car_id",
+									"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+								},
+								{
+									"key": "type",
+									"value": "regular"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/fuel-types?lat=-28214814.560443684&lon=-28214814.560443684&car_id=urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d&type=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"fuel-types"
+									],
+									"query": [
+										{
+											"key": "lat",
+											"value": "-28214814.560443684"
+										},
+										{
+											"key": "lon",
+											"value": "-28214814.560443684"
+										},
+										{
+											"key": "car_id",
+											"value": "urn:uuid:977364a4-a07e-fc61-bdb8-ecdfb451a24d"
+										},
+										{
+											"key": "type",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"fuel_types\": [\n    {\n      \"fuel_type_id\": \"61b84109-f90a-22ae-595b-5e8656573eeb\",\n      \"name\": \"elit ad officia\",\n      \"display_name\": \"quis Ut\",\n      \"color\": \"esse cupidatat\",\n      \"price\": -34995708\n    },\n    {\n      \"fuel_type_id\": \"977d8bfa-8a5f-97ff-25f5-2225497bf964\",\n      \"name\": \"ex eu aliqua\",\n      \"display_name\": \"velit nostrud minim irure aute\",\n      \"color\": \"magna esse cillum\",\n      \"price\": -7163302\n    }\n  ],\n  \"declaration\": \"cupidatat aliquip velit adipisicing\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить список областей для заправки",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/refuel-area?type=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"refuel-area"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/refuel-area?type=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"refuel-area"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"areas\": [\n    [\n      {\n        \"lat\": -97939095.02559112,\n        \"lon\": -96270304.48048526\n      },\n      {\n        \"lat\": -10153610.69234766,\n        \"lon\": 59365762.43450698\n      }\n    ],\n    [\n      {\n        \"lat\": 92738078.17368075,\n        \"lon\": -50114839.20964324\n      },\n      {\n        \"lat\": -1958625.433529541,\n        \"lon\": -28323824.715555996\n      }\n    ]\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить шаг, на который нужно перейти при старте приложения",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/start",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"start"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/start",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"start"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"velit\",\n  \"should_review_app\": false,\n  \"has_unread_notifications\": false,\n  \"has_new_promo_actions\": true,\n  \"referral_info\": {\n    \"text\": \"in labore ea deserunt\",\n    \"shared_text\": \"dolor sit enim quis\"\n  },\n  \"refueller_app_menu\": [\n    {\n      \"title\": \"non ea\",\n      \"url\": \"dolor reprehenderit laboris Duis\"\n    },\n    {\n      \"title\": \"consequat occaecat adipisicing in\",\n      \"url\": \"tempor ut dolore\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить список промокодов",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/promo-codes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"promo-codes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/promo-codes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"promo-codes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"promo_codes\": [\n    {\n      \"code\": \"in sunt\",\n      \"description\": \"aliqua ex irure qui\",\n      \"note\": \"ad est minim\",\n      \"icons\": [\n        \"mollit nulla sed\",\n        \"cillum nisi deserunt nostrud qui\"\n      ],\n      \"background_color\": \"commodo qui\",\n      \"is_active\": false\n    },\n    {\n      \"code\": \"in Lorem\",\n      \"description\": \"dolor aliqua id dolore\",\n      \"note\": \"et\",\n      \"icons\": [\n        \"nisi\",\n        \"veniam aliquip in sunt\"\n      ],\n      \"background_color\": \"aliquip Duis anim\",\n      \"is_active\": false\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Применить промокод",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"dolore\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/promocode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"promocode"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"code\": \"dolore\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/promocode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"promocode"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"description\": \"do ut esse consectetur irure\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Создать запрос на подписку",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/subscription-requests",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"subscription-requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список бензовозов",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/tankers?lat=-28214814.560443684&lon=-28214814.560443684",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tankers"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "-28214814.560443684"
+								},
+								{
+									"key": "lon",
+									"value": "-28214814.560443684"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/tankers?lat=-28214814.560443684&lon=-28214814.560443684",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tankers"
+									],
+									"query": [
+										{
+											"key": "lat",
+											"value": "-28214814.560443684"
+										},
+										{
+											"key": "lon",
+											"value": "-28214814.560443684"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"tankers\": [\n    {\n      \"lat\": -43001654.98353024,\n      \"lon\": -95327525.13299184,\n      \"bearing\": -60146077.15593412\n    },\n    {\n      \"lat\": -90544750.33412403,\n      \"lon\": -546832.9113006592,\n      \"bearing\": -35249315.52679882\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить список моек",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/washes?is_active=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"washes"
+							],
+							"query": [
+								{
+									"key": "is_active",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/washes?is_active=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"washes"
+									],
+									"query": [
+										{
+											"key": "is_active",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"washes\": [\n    {\n      \"id\": \"c69997e7-d594-c1ca-f4bf-0b8f3abae181\",\n      \"lat\": -75054074,\n      \"lon\": -97807302,\n      \"address\": \"veniam pariatur s\",\n      \"photo\": \"ut commodo officia\",\n      \"work_time\": \"consectetur\",\n      \"pin\": \"magna \",\n      \"options\": [\n        {\n          \"id\": \"urn:uuid:d7dc7eb0-c757-639a-41b8-a8e5f0734a1d\",\n          \"name\": \"Excepteur velit eiusmod\",\n          \"price\": -41359839,\n          \"description\": [\n            \"ut ipsum dolore in\",\n            \"do cillum\"\n          ],\n          \"duration\": -83052123\n        },\n        {\n          \"id\": \"b5ef936e-6d1b-af18-4e27-168da352e8a1\",\n          \"name\": \"in minim\",\n          \"price\": 46968064,\n          \"description\": [\n            \"aliquip Lorem eiusmod\",\n            \"sit mollit laboris occaecat\"\n          ],\n          \"duration\": 76532565\n        }\n      ]\n    },\n    {\n      \"id\": \"urn:uuid:2191739d-c204-178c-2f85-b3916a949409\",\n      \"lat\": 29626676,\n      \"lon\": 92532348,\n      \"address\": \"qui\",\n      \"photo\": \"amet do pariatur\",\n      \"work_time\": \"officia ad culpa pariatur\",\n      \"pin\": \"commodo occaecat proident ut\",\n      \"options\": [\n        {\n          \"id\": \"cc9f05aa-b73f-88ed-7b88-0459c722459b\",\n          \"name\": \"dolor veniam\",\n          \"price\": 83051655,\n          \"description\": [\n            \"voluptate non labore\",\n            \"commodo consectetur id minim\"\n          ],\n          \"duration\": 16170352\n        },\n        {\n          \"id\": \"61399f96-6cf4-8527-0576-2342a8ed2221\",\n          \"name\": \"Lorem in magna dolore\",\n          \"price\": 68012349,\n          \"description\": [\n            \"est dolor occaecat veniam sed\",\n            \"Lorem elit aute\"\n          ],\n          \"duration\": -18055862\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://dev.pump.today",
+			"type": "string"
+		}
+	]
+}
